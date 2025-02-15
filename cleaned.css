@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -9,7 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     display: block;
     }body{
     line-height: 1
-    }ol, ul{
+    }ol{
     list-style: none
     }blockquote, q{
     quotes: none
@@ -52,7 +52,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --viewport-height: 100vh
     }html{
     font-size: 18pt
-    }u, .contentpagetext a, #text07 a, #text10 a, #text52 a, .navbartext a, h1.style1 a, h2.style1 a, h3.style1 a, p.style1 a{
+    }u, .contentpagetext a ,.navbartext a, h1.style1 a, h2.style1 a, h3.style1 a, p.style1 a{
     text-decoration: underline
     }strong{
     color: inherit;
@@ -80,7 +80,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-stroke: 0;
     transition: color 0.1s ease-in-out
     }spoiler-text.active{
-    color: #FFF;
     cursor: text
     }s{
     text-decoration: line-through
@@ -96,19 +95,49 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     transition: color 0.25s ease
     }a[onclick]:not([href]){
     cursor: pointer
-    }deferred-script, .icons li a .label{
+    }deferred-script{
     display: none
-    }#wrapper{
+    }
+    #wrapper{
     -webkit-overflow-scrolling: touch;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* min-height: var(--viewport-height); */
     overflow: hidden;
     position: relative;
     z-index: 2
-    }#main{
+    }
+    .repwrapper{
+      -webkit-overflow-scrolling: touch;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* min-height: var(--viewport-height); */
+      /*overflow: hidden;*/
+      position: relative;
+      z-index: 2
+      }
+      #wrapper1 {
+        min-height: var(--viewport-height);
+        justify-content: center;
+        display: flex;
+        padding-bottom: 200px;
+    }
+      #wrapper2{
+        width: 100%; 
+        justify-content: space-between; 
+        flex-direction: row;
+      }
+
+      .text-container{
+        text-align: right;
+        flex: 1;
+      }
+    .main{
+      font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color:#FFF;
     --alignment: center;
     --border-radius-bl: 0;
     --border-radius-br: 0;
@@ -128,7 +157,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     position: relative;
     text-align: var(--alignment);
     z-index: 1
-    }#main > .inner{
+    }.main > .inner{
     --padding-horizontal: 3rem;
     --padding-vertical: 1rem;
     --spacing: 1.25rem;
@@ -139,47 +168,34 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     position: relative;
     width: var(--width);
     z-index: 1
-    }#main > .inner > header{
+    }.main > .inner > header{
     margin-bottom: var(--spacing)
-    }#main > .inner > footer{
+    }.main > .inner > footer{
     margin-top: var(--spacing)
-    }#main > .inner > * > *, .container.style4.default > .wrapper > .inner > *, .container.style4.columns > .wrapper > .inner > * > *, .container.style1.default > .wrapper > .inner > *, .container.style1.columns > .wrapper > .inner > * > *, .container.style2.default > .wrapper > .inner > *, .container.style2.columns > .wrapper > .inner > * > *, .container.style3.default > .wrapper > .inner > *, .container.style3.columns > .wrapper > .inner > * > *{
+    }.main > .inner > * > *, .main > .inner > * > .style1.cb-title{
     margin-bottom: var(--spacing);
     margin-top: var(--spacing)
-    }#main > .inner > * > :first-child, .container.style4.default > .wrapper > .inner > *:first-child, .container.style4.columns > .wrapper > .inner > * > *:first-child, .container.style1.default > .wrapper > .inner > *:first-child, .container.style1.columns > .wrapper > .inner > * > *:first-child, .container.style2.default > .wrapper > .inner > *:first-child, .container.style2.columns > .wrapper > .inner > * > *:first-child, .container.style3.default > .wrapper > .inner > *:first-child, .container.style3.columns > .wrapper > .inner > * > *:first-child{
+    }.main > .inner > * > :first-child{
     margin-top: 0
-    }#main > .inner > * > :last-child, .container.style4.default > .wrapper > .inner > *:last-child, .container.style4.columns > .wrapper > .inner > * > *:last-child, .container.style1.default > .wrapper > .inner > *:last-child, .container.style1.columns > .wrapper > .inner > * > *:last-child, .container.style2.default > .wrapper > .inner > *:last-child, .container.style2.columns > .wrapper > .inner > * > *:last-child, .container.style3.default > .wrapper > .inner > *:last-child, .container.style3.columns > .wrapper > .inner > * > *:last-child{
+    }.main > .inner > * > :last-child{
     margin-bottom: 0
-    }
-    #main > .inner > .full{
-    margin-left: calc(var(--padding-horizontal) * -1);
-    max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
-    width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px)
-    }#main > .inner > .full.screen, #main > .inner > * > .full.screen{
-    border-radius: 0;
-    left: 50%;
-    margin-left: -50vw;
-    max-width: 100vw;
-    position: relative;
-    right: auto;
-    width: 100vw
-    }#main > .inner > .active{
+    }.main > .inner > .active{
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit
-    }#main > .inner > header, #main > .inner > footer{
+    }.main > .inner > header, .main > .inner > footer{
     transition: opacity 0.25s ease-in-out 0.375s, visibility 0.25s linear 0.375s
-    }#main > .inner > header.hidden, #main > .inner > footer.hidden{
+    }.main > .inner > header.hidden, .main > .inner > footer.hidden{
     opacity: 0;
     transition: opacity 0.25s ease-in-out, visibility 0.25s;
     visibility: hidden
-    }#main > .inner > section{
+    }.main > .inner > section{
     transition: opacity 0.5s ease-in-out 0.25s, min-height 0.25s ease-in-out, max-height 0.25s ease-in-out
-    }#main > .inner > section.inactive{
+    }.main > .inner > section.inactive{
     opacity: 0;
     transition: opacity 0.25s ease-in-out
-    }body.is-instant #main, body.is-instant #main > .inner > *, body.is-instant #main > .inner > section > *, #openinglogo .frame img{
+    }body.is-instant .main, body.is-instant .main > .inner > *, body.is-instant .main > .inner > section > *, #openinglogo .frame img{
     transition: none
     }body.is-instant:after{
     display: none;
@@ -223,41 +239,46 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     max-width: 100%;
     vertical-align: top;
     width: inherit
-    }#openinglogo .frame{
-    transition: none;
-    width: 48.375rem
-    }.image.style2 .frame, .image.style3 .frame{
+    }#openinglogo .frame {
+      transition: none;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 2*var(--padding-vertical));
+      margin-left: calc(var(--padding-horizontal) * -1);
+      max-width: 100vw;
+  }.image.style2 .frame, .image.style3 .frame{
     border-radius: 0.5rem;
     max-width: 100%;
     transition: transform 0.375s ease, z-index 0.375s ease;
     width: auto
-    }.image.style2 img, .image.style3 img, .image.style4 img, .image.style1 img,#image25 img, .image.style6 img{
-    height: 100%;
+    }.image.style2 img, .image.style3 img{
     object-fit: cover;
     object-position: center;
-    width: 100%
-    }.image.style2 .frame:hover, .image.style3 .frame:hover, .image.style4 .frame:hover, .image.style5 .frame:hover, #smalllogo .frame:hover, .image.style1 .frame:hover, .image.style6 .frame:hover, .image.style7 .frame:hover{
+    }
+    .image.style1 img{
+      min-height:150px;
+      height: 30vw;
+      max-height:250px;
+    }
+
+    #image25 img{
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      width: 100%
+    }
+    .image.style2 .frame:hover, .image.style3 .frame:hover, #smalllogo .frame:hover, .image.style1 .frame:hover, .image.style7 .frame:hover{
     transform: scale(1.1125);
     z-index: 1
-    }.image.style4 .frame{
-    border-radius: 0.5rem;
-    max-width: 100%;
-    transition: transform 0.25s ease, z-index 0.25s ease;
-    width: auto
-    }.image.style5, #image133{
-    text-align: right
-    }.image.style5 .frame{
-    transition: transform 0.25s ease, z-index 0.25s ease;
-    width: 5rem
     }#smalllogo{
     text-align: left
     }#smalllogo .frame{
     transition: transform 0.25s ease, z-index 0.25s ease;
     width: 8.625rem
-    
     }
  
-    .image.style1 .frame, .image.style6 .frame{
+    .image.style1 .frame{
     border-radius: 0.25rem;
     max-width: 100%;
     transition: transform 0.25s ease, z-index 0.25s ease;
@@ -268,60 +289,50 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }h1, h2, h3, p{
     direction: var(--site-language-direction);
     position: relative
-    }h1 span.p, h2 span.p, h3 span.p, p span.p, .icons li a svg{
+    }h1 span.p, h2 span.p, h3 span.p, p span.p{
     display: block;
     position: relative
     }h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 strong, h3 strong, p strong, h1 a, h2 a, h3 a, p a, h1 code, h2 code, h3 code, p code, h1 mark, h2 mark, h3 mark, p mark, h1 spoiler-text, h2 spoiler-text, h3 spoiler-text, p spoiler-text{
     -webkit-text-fill-color: currentcolor
     }
-      #text07 a:hover, #text10 a:hover, #text52 a:hover,h1.style1 a:hover, h2.style1 a:hover, h3.style1 a:hover, p.style1 a:hover, .contentpagetext a:hover{
+       h1.style1 a:hover, h2.style1 a:hover, h3.style1 a:hover, p.style1 a:hover, .contentpagetext a:hover{
     text-decoration: none
     }.navbartext a:hover{
 color: #f5212b;
-} #text07 span.p:nth-child(n + 2), #text10 span.p:nth-child(n + 2),.navbartext span.p:nth-child(n + 2), h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 span.p:nth-child(n + 2), p.style1 span.p:nth-child(n + 2){
+} .navbartext span.p:nth-child(n + 2), h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 span.p:nth-child(n + 2), p.style1 span.p:nth-child(n + 2){
     margin-top: 1rem
     }
     #welcometext{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 2.25em;
     font-weight: 400;
-    line-height: 1.5
+    line-height: 1.5;
+    padding-bottom: 20px;
     
-}.landingpagetext, #text07, #text52{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}.landingpagetext {
     font-size: 1.25em;
     font-weight: 400;
-    line-height: 1.5
-    }h1.style1, h2.style1, h3.style1, p.style1{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+    min-width: 100px;
+    }
+    #landingpagetext{
+      flex-direction: row; 
+      padding-top: 20px; 
+      align-items: flex-start; 
+      gap: 60px; 
+    }
+    h1.style1, h2.style1, h3.style1, p.style1{
     font-size: 1.125em;
     font-weight: 400;
     line-height: 1.5;
     text-align: left
     }
-    #text51 span.p:nth-child(n + 2), #text52 span.p:nth-child(n + 2) {
-      margin-top: 1.375rem
-      }
+ 
   .contentpagetext{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1.125em;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center
-}#text10{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.125em;
     font-weight: 400;
     line-height: 1.5;
     text-align: center
     }.navbartext{
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.625em;
     font-weight: 400;
     line-height: 1.5;
@@ -337,126 +348,12 @@ color: #f5212b;
     max-width: 100%;
     position: relative;
     text-align: var(--alignment);
-    vertical-align: top
-    }
- 
-  #container53 > .wrapper > .inner {
-      --gutters: 2rem;
+    vertical-align: top;
+    --gutters: 2rem;
       --padding-horizontal: 2rem;
       --padding-vertical: 2rem;
       --spacing: 0.75rem;
-      padding: var(--padding-vertical) var(--padding-horizontal)
-      } #container53.columns > .wrapper > .inner, .container.style1.columns > .wrapper > .inner{
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap
-    }.container.style4.columns > .wrapper > .inner > *, .container.style1.columns > .wrapper > .inner > *, .container.style2.columns > .wrapper > .inner > *, .container.style3.columns > .wrapper > .inner > *{
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: 100%;
-    padding: 0 0 0 var(--gutters);
-    text-align: var(--alignment)
-    }.container.style4.columns > .wrapper > .inner > *:first-child, .container.style1.columns > .wrapper > .inner > *:first-child, .container.style2.columns > .wrapper > .inner > *:first-child, .container.style3.columns > .wrapper > .inner > *:first-child{
-    margin-left: calc(var(--gutters) * -1)
-    }.container.style4, .container.style2{
-    --alignment: center;
-    --flex-alignment: center;
-    --indent-left: 1;
-    --indent-right: 1;
-    --margin-left: auto;
-    --margin-right: auto
-    }.container.style4:not(:first-child), .container.style3:not(:first-child){
-    margin-top: 0rem
-    }.container.style4:not(:last-child), .container.style3:not(:last-child){
-    margin-bottom: 0rem
-    }.container.style4 > .wrapper{
-    background-color: transparent;
-    display: block;
-    margin: 0 auto 0 0;
-    width: 15rem
-    }.container.style4 > .wrapper > .inner{
-    --gutters: 0rem;
-    --padding-horizontal: 0rem;
-    --padding-vertical: 0rem;
-    padding: var(--padding-vertical) var(--padding-horizontal)
-    }.container.style4.columns > .wrapper > .inner, .container.style2.columns > .wrapper > .inner, .container.style3.columns > .wrapper > .inner{
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap
-    }.container.style1 > .wrapper{
-    background-color: transparent;
-    display: inline-block;
-    width: 75rem
-    }.container.style1 > .wrapper > .inner{
-    --gutters: 1.5rem;
-    --padding-horizontal: 0.125rem;
-    --padding-vertical: 0.5rem;
-    --spacing: 3rem;
-    height: 30dvh;
-    min-height: 200px;
-    padding: var(--padding-vertical) var(--padding-horizontal)
-    }.container.style2 > .wrapper{
-    background-color: transparent;
-    display: inline-block;
-    width: 69rem
-    }.container.style2 > .wrapper > .inner{
-    --gutters: 2.75rem;
-    --padding-horizontal: 0.625rem;
-    --padding-vertical: 1.75rem;
-    --spacing: 1.25rem;
-    padding: var(--padding-vertical) var(--padding-horizontal)
-    }.container.style3 > .wrapper{
-    background-color: transparent;
-    display: inline-block;
-    width: 64rem
-    }.container.style3 > .wrapper > .inner{
-    --gutters: 2.75rem;
-    --padding-horizontal: 0.75rem;
-    --padding-vertical: 1.75rem;
-    --spacing: 3rem;
-    padding: var(--padding-vertical) var(--padding-horizontal)
-    
-    
-    }.icons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: var(--flex-alignment);
-    letter-spacing: 0;
-    padding: 0
-    }.icons li{
-    position: relative;
-    z-index: 1
-    }.icons li a{
-    align-items: center;
-    display: flex;
-    justify-content: center
-    }.icons li a + svg{
-    display: block;
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1
-    }.icons.style1, #icons48{
-    font-size: 1.375em;
-    gap: 0.125rem;
-    justify-content: flex-start
-    }.icons.style1 li a{
-    height: 1em;
-    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-    width: 1em
-    }.icons.style1 li a svg{
-    height: 100%;
-    transition: fill 0.25s ease;
-    width: 100%
-    }.icons.style1 a svg{
-    fill: #FFF
-    }.icons.style1 li a + svg{
-    transition: transform 0.25s ease, fill 0.25s ease, stroke 0.25s ease
-    }.icons.style1 li a:hover, .icons.style1 li a:hover + svg{
-    transform: scale(1.1125)
+      padding: 0px var(--padding-horizontal);
     }.video video{
     display: inline-block;
     max-width: 100%;
@@ -495,56 +392,8 @@ color: #f5212b;
     width: 100%
     }hr:before{
     content: ""
-    }.buttons{
-    cursor: default;
-    display: flex;
-    justify-content: var(--flex-alignment);
-    letter-spacing: 0;
-    padding: 0
-    }.buttons li{
-    max-width: 100%;
-    text-align: var(--alignment)
-    }.buttons li a{
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    white-space: nowrap
-    }.buttons.style1{
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.25rem
-    }.buttons.style1 li a{
-    border-radius: 0rem;
-    direction: var(--site-language-direction);
-    display: inline-block;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1.125em;
-    font-weight: 400;
-    height: auto;
-    letter-spacing: 0.1rem;
-    line-height: 0.75rem;
-    overflow: hidden;
-    padding: 0 1.25rem;
-    padding-bottom: 0.78125rem;
-    padding-left: calc(0.1rem + 1.25rem);
-    padding-top: 0.78125rem;
-    text-align: var(--alignment);
-    text-overflow: ellipsis;
-    transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-    vertical-align: middle;
-    white-space: normal;
-    width: auto
-    }.buttons.style1 .button{
-    background-color: #000;
-    color: #FFF
-    }.buttons.style1 li a:hover{
-    transform: scale(1.165)
     }.caption{
   position: absolute;
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   bottom: 0px; /* Position at the bottom of the image */
   left: 0;
   width: 100%; /* Make it the same width as the image */
@@ -565,13 +414,13 @@ color: #f5212b;
   white-space: normal;
 }.image.style1 .frame:hover .caption{
     opacity: 1; /* Show the caption on hover */
-  }.switchcontainer{
+
+    /*css for the switch that highlights subbed content*/
+  }#switchcontainer{
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: flex-end; /* Right align the content */
     gap: 10px; /* Adds some space between the text and slider */
-    color: #FFF;
-    font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.65em;
     background-color: #242424;
     border-radius: 0;
@@ -582,7 +431,7 @@ color: #f5212b;
     width: 100vw;
     padding: 8px;
     padding-right: 30px;
-    margin-top: 0;
+    margin-top: 0px;
   }.switch{
     position: relative;
     display: inline-block;
@@ -633,6 +482,8 @@ color: #f5212b;
     transition: opacity 0.3s ease;
   }
 
+
+
   .welcomepageimagecontainer {
     display: flex;             /* Enables Flexbox */
     justify-content: center;   /* Centers images horizontally */
@@ -650,10 +501,11 @@ color: #f5212b;
     align-items: center;       /* Centers image and text */
     justify-content: flex-start;/* Aligns items at the top */
     height: 100%;              /* Take up the full height of the container */
+    flex: 1;
 }
 
 .image-item img {
-    height: 100%;              /* Ensures the image fills the height of the container */
+  max-height: 150px;
     width: auto;               /* Keeps the aspect ratio */
 }
 
@@ -663,11 +515,12 @@ color: #f5212b;
 
 
 .banner {
-  width: 100vw;             /* Full width of the viewport */
+               /* Full width of the viewport */
   height: auto;             /* Height will adjust based on the image aspect ratio */
   overflow: hidden;         /* Ensures no overflow if the image size exceeds */
   position: relative;       /* Ensures the image inside positions correctly */
-  left: -3rem;
+  margin-left: calc(var(--padding-horizontal) * -1);
+  width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
   border: 0px solid transparent; /* Start with a transparent border */
   transition: border-color 0.35s ease-in-out, border-width 0.35s ease-in-out; /* Transition both color and width */
 }
@@ -695,7 +548,6 @@ color: #f5212b;
 .catalogue-item {
   flex: 0 1 auto; /* Prevents items from stretching, and allows them to shrink or grow based on content */
   width: auto; /* Ensures the items adjust based on their content */
-  height: 17vw;
 }
 .catalogue-item img {
   width: 100%; /* Ensures the image takes the full width of the grid item */
@@ -717,10 +569,10 @@ color: #f5212b;
   top: 20;
   left: 20;
   z-index: 1000; /* Ensures it stays above other elements */
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin-left: 20px;
   margin-top: 20px;
 }
+
 
 .top-banner a {
  /* Adjust color */
@@ -733,46 +585,53 @@ color: #f5212b;
   color: #f5212b;
 }
 
+#aboutsection.top-banner{
+  left: 0px; 
+  height: auto;
+  position:relative;
+}
+
 .background-image {
   width: 100vw;
   position: relative;
   height: 100%;
   object-fit: cover;
   left: 0;
-  top: -3rem;
+  top: calc(var(--padding-vertical)*-1);
 }
 
 .bckgndimage-container {
-  position: relative;
-  width: 100vw;
-  height: 100%; /* Adjust as needed */
-  overflow: hidden; /* Ensures no overflow */
-  left:-3rem;
-  top:-3rem;
+ 
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: calc(var(--padding-vertical)*-1);
+    left: calc(var(--padding-horizontal)*-1);
 }
 
-.bckgndimage-container::before {
-  content: "";
-  position: absolute;
-  top: -3rem;
-  left: -3rem;
-  width: 100vw;
-  height: 100%;
-  background: linear-gradient(to right, black 28%, rgba(0, 0, 0, 0) 70%);
-  z-index: 1; /* Ensures it overlays the image */
+
+  .bckgndimage-container::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--padding-vertical)*-1);
+    left: calc(var(--padding-horizontal)*-1);
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to right, black 28%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
 }
 
 .overlay-content {
   position: absolute;
-  bottom: 10px; /* Centers vertically in the image container */
-  left: 0; /* Aligns the content to the left of the container */
-  transform: translateY(-50%); /* Adjusts the vertical position to center the text */
-  padding: 20px;
-  padding-left: 30px;
-  color: white; /* Text color */
-  z-index: 2; /* Makes sure the text and buttons are above the image */
+  bottom: 0; /* Aligns to the bottom of the parent */
+  left: 0; /* Sticks to the left */
+  padding: 20px 30px; /* Adjusts spacing inside */
+  color: white; /* Keeps text color */
+  z-index: 2; /* Ensures it's above the image */
   text-align: left;
   width:45vw;
+  padding-bottom: 50px;
 }
 
 .overlay-content h1, .overlay-content p {
@@ -781,14 +640,12 @@ color: #f5212b;
 
 
 .overlay-content h1{
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bolder;
   font-size: 48px;
   padding-bottom: 10px;
 }
 
 .overlay-content p{
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.25 ;
   padding-bottom: 15px;
 }
@@ -799,7 +656,7 @@ color: #f5212b;
 }
 
 .button2 {
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
   display: inline-block;
   background-color: #f5212b; /* Button color */
   color: white; /* Button text color */
@@ -808,7 +665,22 @@ color: #f5212b;
   font-size: 12px;
   border-radius: 5px;
   text-align: center;
-  
+  align-content: center;
+}
+
+.button3-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between buttons */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Adjust based on your design */
+}
+
+/* When the container is too narrow, switch to a single column */
+@media (max-width: 900px) { 
+  .button3-container {
+    grid-template-columns: 1fr; /* Stack buttons in one column */
+  }
 }
 
 .button2:hover {
@@ -817,7 +689,7 @@ color: #f5212b;
 
 .tooltip {
   position: relative;
-  display: inline-block;
+  display: flex;
   cursor: pointer; /* Optional: makes the element look clickable */
 }
 
@@ -863,17 +735,16 @@ color: #f5212b;
 }
 
 .teasercontainer {
-  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:white;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   width: 100vw; /* Full viewport width */
   position: relative;
-  left:-3rem;
   padding-top:15vh;
-  padding-right:10vw;
-  padding-left:10vw;
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
   margin-bottom: 0px;
   flex-direction: column;
 
@@ -883,11 +754,14 @@ color: #f5212b;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 0px 5vw;
 }
 
 .youtube-video {
   width: 560px; /* Set width of video */
   height: 315px; /* Set height of video */
+  max-width: 95vw;
 }
 
   .textbox {
@@ -898,27 +772,32 @@ color: #f5212b;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 25px;
+  }
+
+  .multiepisode.textbox {
+    margin-left:20px;
   }
 
   .textbox img{
     height: 315px;
     width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
   }
+
 .title {
   white-space: normal; /* Ensures words wrap only at spaces */
   text-align: center;
   font-weight: bold;
-  color: white;
   line-height: 1.2; /* Keeps text compact */
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 
 .description {
   font-size: 20px;
   line-height: 1.25;
-  color: white;
   margin-bottom: 20px;
 }
 
@@ -930,21 +809,298 @@ color: #f5212b;
   margin: 10px auto; /* Adds space around the line */
 }
 
-.episodelog-item {
-  flex: 0 1 auto; /* Prevents items from stretching, and allows them to shrink or grow based on content */
-  width: auto; /* Ensures the items adjust based on their content */
-  height: 10vw;
-}
-.episodelog-item img {
-  width: 100%; /* Ensures the image takes the full width of the grid item */
-  height: 100%; /* Maintains the aspect ratio of the image */
-  transition: transform 0.3s ease; /* Adds a smooth hover effect */
-}
-
 .image.style7 .frame{
-  border-radius: 0.35rem;
+  border-radius: 4%/7.6%;
   max-width: 100%;
   transition: transform 0.25s ease, z-index 0.25s ease;
   width: auto;
+  min-width: 200px;
   position: relative; /* Required for positioning the caption */
   display: inline-block;}
+
+  .paragraph{
+    margin-bottom: 20px ;
+    text-align: left;
+    line-height: 1.25;
+    font-size:18px;
+  }
+
+  .paragraph a:hover{
+    color: #f5212b;
+  }
+
+.centeringcontainer{
+  display: flex;
+  justify-content: center; /* Centers the grid horizontally */
+  width: 100vw;
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  padding: 0px 8vw;
+  flex-direction: column;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+  grid-gap: 16px;
+  justify-content: center;
+  padding: initial;
+}
+
+.episodelog-item {
+  list-style-type: none;
+  padding: 5px;
+  display: flex; /* Make sure the li is a flex container */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: auto; /* Ensures the item fills its grid cell */
+}
+
+.episodelog-item img {
+  width: 100%; /* Ensures the image takes the full width of the grid item */
+  height: auto; /* Keeps the aspect ratio */
+  transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.main > .inner > * > .style1, .main > .inner > * > .centeringcontainer,  .main > .inner > * > .banner {
+  margin-bottom: 0;  /* Set your desired margin */
+  margin-top: 0;     /* Set your desired margin */
+}
+
+/*comeback layout styling*/
+.cb-video-box{
+  gap: 20px; 
+  justify-content: space-between; 
+  width: 100%; 
+  max-width: 1200px;
+}
+
+.cbimage{
+  width: auto;
+}
+
+.tracklist-box{
+  justify-content: flex-start;
+}
+
+.cb-buttons{
+  gap: auto; 
+  flex-direction: column; 
+}
+
+.cbsecondbox{
+  margin-top: 5vh;
+}
+
+.cbtext{
+width: 50vw;
+text-align: left;
+}
+
+.cbcontainer{
+  margin-bottom:0px; 
+  padding-top: 0px;
+}
+
+p.style1.cb-title{
+  text-align: center; 
+  margin-bottom: 0px; 
+  font-weight: bold; 
+  font-size:45px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5; /* Ensures consistent height */
+  align-items: baseline; /* Ensures text is aligned at the bottom */
+
+
+}
+
+.songtitle {
+  white-space: nowrap;
+  text-align: left;
+  margin-right: 4px;
+}
+
+.dots {
+flex-grow: 1;
+  border-bottom: 3px dotted rgb(255, 255, 255);
+  height: 1em; /* Ensures the dots are aligned with text */
+  overflow: hidden;
+
+}
+
+.duration {
+  white-space: nowrap;
+  margin-left: 4px;
+}
+
+.tracklisttitle{
+white-space: normal; /* Ensures words wrap only at spaces */
+text-align: center;
+font-weight: bold;
+line-height: 1.2; /* Keeps text compact */
+margin-bottom: 20px;
+font-size: 40px;
+}
+.tracklist{
+width:100%;
+}
+
+.musicicon img{
+  
+  height: 8vh; /* Set a fixed height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.musicicon img:hover{
+  transform: scale(1.1125);
+}
+
+
+/*about page styling*/
+
+.abpagetext{
+  width: 35vw; 
+  margin-left: 0px;
+}
+
+/* responsive media resizing for phones*/
+@media (max-width: 768px) {
+  .main > .inner > * > *, .main > .inner > * > .style1.cb-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+  #wrapper2 {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .text-container{
+    text-align: center;
+    width: 100vw;
+  }
+
+  .cataloguepagegrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    gap: 8px;
+    padding: 10px;
+    width: 100vw;
+    margin-left: calc(var(--padding-horizontal) * -1);
+}
+  p.style1 {
+  /* text-align: -webkit-left; */
+  width: calc(100vw - 100px);
+  left: calc(var(--padding-horizontal)* -1);
+  padding-left: 10px;
+  }
+  .catalogue-item {
+    flex: 0 0 auto; /* Prevents items from stretching, and allows them to shrink or grow based on content */
+    width: auto; /* Ensures the items adjust based on their content */
+  }
+
+  #landingpagetext{
+    flex-direction: column;
+    padding: 0 calc(var(--padding-horizontal))
+  }
+
+  .abpagetext{
+    width: 80vw;
+    margin-left: calc(var(--padding-horizontal) * -1.5);
+  }
+
+  #aboutsection.top-banner {
+    left: calc(var(--padding-horizontal) * -1);
+    top: 0;
+    width: max-content;
+}
+.video-box{
+  flex-direction: column;
+}
+
+.tracklist-box{
+  width:80vw;
+}
+
+.divider{
+  border-top: 0px;
+}
+
+.cbtext{
+  width: 80vw;
+}
+
+p.style1.cb-title{
+  width:100vw;
+}
+
+.top-banner{
+ position: absolute;
+}
+
+.multiepisode.textbox{
+  width:80vw;
+}
+.teasercontainer{
+  padding-top:0px;
+
+}
+
+.bckgndimage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything */
+  text-align: center;
+  height: auto; /* Adjust height for mobile */
+  padding: 20px; /* Adds spacing */
+}
+
+.bckgndimage-container::before {
+  display: none; /* Removes the gradient overlay */
+}
+
+.background-image {
+  width: 100%;
+  height: auto; /* Makes image resize properly */
+  margin-top: 80px;
+}
+
+.overlay-content {
+  position: static; /* Removes absolute positioning */
+  transform: none;
+  width: 90%; /* Full width with padding */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Add spacing */
+}
+
+.button2-container {
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px;
+}
+
+.button2 {
+  width: 100%; /* Full width buttons */
+  max-width: 250px; /* Prevents them from being too wide */
+  margin: 0 auto; /* Center the buttons */
+
+}
+}
+
+
+@media (max-width: 400px) {
+#switchcontainer{
+  font-size:0.45rem;
+}
+}
+
