@@ -17,7 +17,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install webp -y
-          npm install -g html-minifier cssnano terser
+          npm install -g html-minifier terser postcss postcss-cli cssnano
 
       - name: Minify HTML, CSS, and JavaScript
         run: |
@@ -26,7 +26,7 @@ jobs:
             html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true "$file" -o "optimized/$file"
           done
           for file in *.css; do
-            cssnano "$file" "optimized/$file"
+            postcss "$file" --use cssnano --no-map -o "optimized/$file"
           done
           for file in *.js; do
             terser "$file" -o "optimized/$file"
