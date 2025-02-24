@@ -42,10 +42,20 @@ jobs:
 
       - name: Optimize Images (Convert to WebP)
         run: |
-          mkdir -p optimized/images
-          for img in images/*.{jpg,png}; do
-            cwebp -q 75 "$img" -o "optimized/${img%.*}.webp"
-          done
+          mkdir -p optimized/assets/images
+          
+          # Check if JPG or PNG files exist before processing
+          if ls assets/images/*.jpg 1> /dev/null 2>&1; then
+            for img in assets/images/*.jpg; do
+              [ -f "$img" ] && cwebp -q 75 "$img" -o "optimized/${img%.*}.webp"
+            done
+          fi
+          
+          if ls assets/images/*.png 1> /dev/null 2>&1; then
+            for img in assets/images/*.png; do
+              [ -f "$img" ] && cwebp -q 75 "$img" -o "optimized/${img%.*}.webp"
+            done
+          fi
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
