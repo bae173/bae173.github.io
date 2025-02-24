@@ -1,0 +1,1106 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline
+    }article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+    display: block;
+    }body{
+    line-height: 1
+    }ol{
+    list-style: none
+    }blockquote, q{
+    quotes: none
+    }blockquote:before, blockquote:after, q:before, q:after{
+    content: none
+    }table{
+    border-collapse: collapse;
+    border-spacing: 0
+    }body{
+    -webkit-text-size-adjust: none
+    }mark{
+    background-color: transparent;
+    color: inherit
+    }input::-moz-focus-inner{
+    border: 0;
+    padding: 0
+    }input[type="text"], input[type="email"], select, textarea{
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none
+    }*, *:before, *:after{
+    box-sizing: border-box
+    }body{
+    background-color: #000;
+    line-height: 1;
+    min-height: var(--viewport-height);
+    min-width: 320px;
+    overflow-x: hidden;
+    word-wrap: break-word
+    }:root{
+    --background-height: 100vh;
+    --site-language-alignment: left;
+    --site-language-direction: ltr;
+    --site-language-flex-alignment: flex-start;
+    --site-language-indent-left: 1;
+    --site-language-indent-right: 0;
+    --site-language-margin-left: 0;
+    --site-language-margin-right: auto;
+    --viewport-height: 100vh
+    }html{
+    font-size: 18pt
+    }u, .contentpagetext a ,.navbartext a, h1.style1 a, h2.style1 a, h3.style1 a, p.style1 a{
+    text-decoration: underline
+    }strong{
+    color: inherit;
+    font-weight: bolder
+    }em{
+    font-style: italic
+    }code{
+    background-color: rgba(144, 144, 144, 0.25);
+    border-radius: 0.25em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 0.9em;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin: 0 0.25em;
+    padding: 0.25em 0.5em;
+    text-indent: 0
+    }mark{
+    background-color: rgba(144, 144, 144, 0.25)
+    }spoiler-text{
+    -webkit-text-stroke: 0;
+    background-color: rgba(32, 32, 32, 0.75);
+    color: transparent;
+    cursor: pointer;
+    text-shadow: none;
+    text-stroke: 0;
+    transition: color 0.1s ease-in-out
+    }spoiler-text.active{
+    cursor: text
+    }s{
+    text-decoration: line-through
+    }sub{
+    font-size: smaller;
+    vertical-align: sub
+    }sup{
+    font-size: smaller;
+    vertical-align: super
+    }a{
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.25s ease
+    }a[onclick]:not([href]){
+    cursor: pointer
+    }deferred-script{
+    display: none
+    }
+    #wrapper{
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2
+    }
+    .repwrapper{
+      -webkit-overflow-scrolling: touch;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* min-height: var(--viewport-height); */
+      /*overflow: hidden;*/
+      position: relative;
+      z-index: 2
+      }
+      #wrapper1 {
+        min-height: var(--viewport-height);
+        justify-content: center;
+        display: flex;
+        padding-bottom: 200px;
+    }
+      #wrapper2{
+        width: 100%; 
+        justify-content: space-between; 
+        flex-direction: row;
+      }
+
+      .text-container{
+        text-align: right;
+        flex: 1;
+      }
+    .main{
+      font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color:#FFF;
+    --alignment: center;
+    --border-radius-bl: 0;
+    --border-radius-br: 0;
+    --border-radius-tl: 0;
+    --border-radius-tr: 0;
+    --flex-alignment: center;
+    --indent-left: 1;
+    --indent-right: 1;
+    --margin-left: auto;
+    --margin-right: auto;
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    text-align: var(--alignment);
+    z-index: 1
+    }.main > .inner{
+    --padding-horizontal: 3rem;
+    --padding-vertical: 1rem;
+    --spacing: 1.25rem;
+    --width: 85rem;
+    border-radius: var(--border-radius-tl) var(--border-radius-tr) var(--border-radius-br) var(--border-radius-bl);
+    max-width: 100%;
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    position: relative;
+    width: var(--width);
+    z-index: 1
+    }.main > .inner > header{
+    margin-bottom: var(--spacing)
+    }.main > .inner > footer{
+    margin-top: var(--spacing)
+    }.main > .inner > * > *, .main > .inner > * > .style1.cb-title{
+    margin-bottom: var(--spacing);
+    margin-top: var(--spacing)
+    }.main > .inner > * > :first-child{
+    margin-top: 0
+    }.main > .inner > * > :last-child{
+    margin-bottom: 0
+    }.main > .inner > .active{
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit
+    }.main > .inner > header, .main > .inner > footer{
+    transition: opacity 0.25s ease-in-out 0.375s, visibility 0.25s linear 0.375s
+    }.main > .inner > header.hidden, .main > .inner > footer.hidden{
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s;
+    visibility: hidden
+    }.main > .inner > section{
+    transition: opacity 0.5s ease-in-out 0.25s, min-height 0.25s ease-in-out, max-height 0.25s ease-in-out
+    }.main > .inner > section.inactive{
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out
+    }body.is-instant .main, body.is-instant .main > .inner > *, body.is-instant .main > .inner > section > *, #openinglogo .frame img{
+    transition: none
+    }body.is-instant:after{
+    display: none;
+    transition: none
+    }.deferred:before{
+    animation: loading-spinner 1s infinite linear;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    content: "";
+    display: block;
+    height: 4rem;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity 0.25s ease;
+    transition-delay: 0.5s;
+    width: 4rem;
+    z-index: -1
+    }.deferred.loading:before{
+    opacity: 0.35;
+    z-index: 0
+    }.image{
+    display: block;
+    line-height: 0;
+    max-width: 100%;
+    position: relative
+    }.image .frame{
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    vertical-align: top;
+    width: 100%
+    }.image .frame img{
+    border-radius: 0;
+    max-width: 100%;
+    vertical-align: top;
+    width: inherit
+    }#openinglogo .frame {
+      transition: none;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 2*var(--padding-vertical));
+      margin-left: calc(var(--padding-horizontal) * -1);
+      max-width: 100vw;
+  }.image.style2 .frame, .image.style3 .frame{
+    border-radius: 0.5rem;
+    max-width: 100%;
+    transition: transform 0.375s ease, z-index 0.375s ease;
+    width: auto
+    }.image.style2 img, .image.style3 img{
+    object-fit: cover;
+    object-position: center;
+    }
+    .image.style1 img{
+      min-height:150px;
+      height: 30vw;
+      max-height:250px;
+    }
+
+    #image25 img{
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      width: 100%
+    }
+    .image.style2 .frame:hover, .image.style3 .frame:hover, #smalllogo .frame:hover, .image.style1 .frame:hover, .image.style7 .frame:hover{
+    transform: scale(1.1125);
+    z-index: 1
+    }#smalllogo{
+    text-align: left
+    }#smalllogo .frame{
+    transition: transform 0.25s ease, z-index 0.25s ease;
+    width: 8.625rem
+    }
+ 
+    .image.style1 .frame{
+    border-radius: 0.25rem;
+    max-width: 100%;
+    transition: transform 0.25s ease, z-index 0.25s ease;
+    width: auto;
+    position: relative; /* Required for positioning the caption */
+    display: inline-block
+
+    }h1, h2, h3, p{
+    direction: var(--site-language-direction);
+    position: relative
+    }h1 span.p, h2 span.p, h3 span.p, p span.p{
+    display: block;
+    position: relative
+    }h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 strong, h3 strong, p strong, h1 a, h2 a, h3 a, p a, h1 code, h2 code, h3 code, p code, h1 mark, h2 mark, h3 mark, p mark, h1 spoiler-text, h2 spoiler-text, h3 spoiler-text, p spoiler-text{
+    -webkit-text-fill-color: currentcolor
+    }
+       h1.style1 a:hover, h2.style1 a:hover, h3.style1 a:hover, p.style1 a:hover, .contentpagetext a:hover{
+    text-decoration: none
+    }.navbartext a:hover{
+color: #f5212b;
+} .navbartext span.p:nth-child(n + 2), h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 span.p:nth-child(n + 2), p.style1 span.p:nth-child(n + 2){
+    margin-top: 1rem
+    }
+    #welcometext{
+    font-size: 2.25em;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    
+}.landingpagetext {
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.5;
+    min-width: 100px;
+    }
+    #landingpagetext{
+      flex-direction: row; 
+      padding-top: 20px; 
+      align-items: flex-start; 
+      gap: 60px; 
+    }
+    h1.style1, h2.style1, h3.style1, p.style1{
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left
+    }
+ 
+  .contentpagetext{
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center
+    }.navbartext{
+    font-size: 0.625em;
+    font-weight: 400;
+    line-height: 1.5;
+    }.container, .video{
+    position: relative
+    }.container > .wrapper{
+    border-radius: inherit;
+    max-width: 100%;
+    position: relative;
+    vertical-align: top
+    }.container > .wrapper > .inner{
+    border-radius: inherit;
+    max-width: 100%;
+    position: relative;
+    text-align: var(--alignment);
+    vertical-align: top;
+    --gutters: 2rem;
+      --padding-horizontal: 2rem;
+      --padding-vertical: 2rem;
+      --spacing: 0.75rem;
+      padding: 0px var(--padding-horizontal);
+    }.video video{
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top
+    }.video .frame{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top
+    }.video .frame:before{
+    content: "";
+    display: block;
+    width: 100%
+    }.video .frame iframe{
+    background-color: #000;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%
+    }.video.style1 video, .video.style1 .frame{
+    width: 100vw
+    }.video.style1 .frame:before{
+    padding-top: 56.25%
+    }hr{
+    align-items: center;
+    border: 0;
+    display: flex;
+    justify-content: var(--flex-alignment);
+    min-height: 1rem;
+    padding: 0;
+    position: relative;
+    width: 100%
+    }hr:before{
+    content: ""
+    }.caption{
+  position: absolute;
+  bottom: 0px; /* Position at the bottom of the image */
+  left: 0;
+  width: 100%; /* Make it the same width as the image */
+  max-height: 100%; /* Ensures caption does not exceed container */
+  line-height: 1.2em;  /* Adjusts spacing between lines */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color */
+  text-align: center;
+  padding: 10%;
+  opacity: 0; /* Start as hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  font-size: 0.7em;
+  font-size: clamp(12px, 1.25vw, 18px);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+}.image.style1 .frame:hover .caption{
+    opacity: 1; /* Show the caption on hover */
+
+    /*css for the switch that highlights subbed content*/
+  }#switchcontainer{
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: flex-end; /* Right align the content */
+    gap: 10px; /* Adds some space between the text and slider */
+    font-size: 0.65em;
+    background-color: #242424;
+    border-radius: 0;
+    left: 50%;
+    margin-left: -3rem;
+    max-width: 100vw;
+    right: auto;
+    width: 100vw;
+    padding: 8px;
+    padding-right: 30px;
+    margin-top: 0px;
+  }.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25.5px;
+    padding-right: 10px;
+  }.switch input{ 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }.slider:before{
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 19.5px;
+    width: 19.5px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }/* Rounded sliders */
+  .slider.round{
+    border-radius: 25.5px;
+  }.slider.round:before{
+    border-radius: 50%;
+  }input:checked + .slider{
+    background-color: #f5212b;
+  }input:focus + .slider{
+    box-shadow: 0 0 1px #f5212b;
+  }input:checked + .slider:before{
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+  }/* Styling for images (graying them out) */
+  .image{
+    transition: opacity 0.3s ease;
+  }
+
+
+
+  .welcomepageimagecontainer {
+    display: flex;             /* Enables Flexbox */
+    justify-content: center;   /* Centers images horizontally */
+    align-items: center;       /* Aligns them vertically */
+    gap: 50px;                 /* Adds space between images */
+    text-align: center;        /* Centers text under each image */
+    height: 12vw;              /* Sets the height of the container */
+    min-height: 175px;         /* Ensures a minimum height for responsiveness */
+    width: 100%;               /* Makes sure the container takes up full width */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;    /* Stacks image and text vertically */
+    align-items: center;       /* Centers image and text */
+    justify-content: flex-start;/* Aligns items at the top */
+    height: 100%;              /* Take up the full height of the container */
+    flex: 1;
+}
+
+.image-item img {
+  max-height: 150px;
+    width: auto;               /* Keeps the aspect ratio */
+}
+
+.image-item p {
+    margin-top: 10px;          /* Adds space between image and text */
+}
+
+
+.banner {
+               /* Full width of the viewport */
+  height: auto;             /* Height will adjust based on the image aspect ratio */
+  overflow: hidden;         /* Ensures no overflow if the image size exceeds */
+  position: relative;       /* Ensures the image inside positions correctly */
+  margin-left: calc(var(--padding-horizontal) * -1);
+  width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  border: 0px solid transparent; /* Start with a transparent border */
+  transition: border-color 0.35s ease-in-out, border-width 0.35s ease-in-out; /* Transition both color and width */
+}
+
+.banner img {
+  width: 100%;              /* Image fills the full width of the banner */
+  height: auto;             /* Maintains the aspect ratio */
+  object-fit: cover;        /* Ensures the image covers the full area, cropping if needed */
+  border-width: 8px;        /* Default width for border */
+}
+
+.banner:hover {
+  border-color: #f5212b;    /* Red border color on hover */
+  border-width: 8px;        /* Keep the border width constant */
+}
+
+
+.cataloguepagegrid {
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows items to wrap into new rows */
+  gap: 30px; /* Controls the space between items */
+  justify-content: flex-start; /* Aligns items to the start (left) */
+}
+
+.catalogue-item {
+  flex: 0 1 auto; /* Prevents items from stretching, and allows them to shrink or grow based on content */
+  width: auto; /* Ensures the items adjust based on their content */
+}
+.catalogue-item img {
+  width: 100%; /* Ensures the image takes the full width of the grid item */
+  height: 100%; /* Maintains the aspect ratio of the image */
+  border-radius: 10px; /* Optional: adds rounded corners to the images */
+  transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.catalogue-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.top-banner {
+  width: 100%;
+  height: 50px; /* Adjust as needed */
+  display: flex;
+  position: fixed; /* Stays at the top */
+  color: white;
+  top: 20;
+  left: 20;
+  z-index: 1000; /* Ensures it stays above other elements */
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+
+.top-banner a {
+ /* Adjust color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.top-banner a:hover {
+  color: #f5212b;
+}
+
+#aboutsection.top-banner{
+  left: 0px; 
+  height: auto;
+  position:relative;
+}
+
+.background-image {
+  width: 100vw;
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: calc(var(--padding-vertical)*-1);
+}
+
+.bckgndimage-container {
+ 
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: calc(var(--padding-vertical)*-1);
+    left: calc(var(--padding-horizontal)*-1);
+}
+
+
+  .bckgndimage-container::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--padding-vertical)*-1);
+    left: calc(var(--padding-horizontal)*-1);
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to right, black 28%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0; /* Aligns to the bottom of the parent */
+  left: 0; /* Sticks to the left */
+  padding: 20px 30px; /* Adjusts spacing inside */
+  color: white; /* Keeps text color */
+  z-index: 2; /* Ensures it's above the image */
+  text-align: left;
+  width:45vw;
+  padding-bottom: 50px;
+}
+
+.overlay-content h1, .overlay-content p {
+  margin: 0 0 10px; /* Adds space between text elements */
+}
+
+
+.overlay-content h1{
+  font-weight: bolder;
+  font-size: 48px;
+  padding-bottom: 10px;
+}
+
+.overlay-content p{
+  line-height: 1.25 ;
+  padding-bottom: 15px;
+}
+
+.button2-container {
+  display: flex; /* Aligns buttons horizontally */
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.button2 {
+  
+  display: inline-block;
+  background-color: #f5212b; /* Button color */
+  color: white; /* Button text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+
+.button3-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between buttons */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Adjust based on your design */
+}
+
+/* When the container is too narrow, switch to a single column */
+@media (max-width: 900px) { 
+  .button3-container {
+    grid-template-columns: 1fr; /* Stack buttons in one column */
+  }
+}
+
+.button2:hover {
+  background-color: #c4191d; /* Darker button color on hover */
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  cursor: pointer; /* Optional: makes the element look clickable */
+}
+
+.tooltip .tooltip-text {
+  font-family: 'Courier New', Courier, monospace;
+  visibility: hidden; /* Hidden by default */
+  width: 150px; /* Adjust width as needed */
+  background-color: hsl(0, 0%, 100%); /* Tooltip background color */
+  color: black; /* Text color */
+  text-align: center; /* Center the text inside */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Adjust padding */
+  position: absolute;
+  z-index: 1;
+  bottom: 120%; /* Position above the element */
+  left: 75%;
+  margin-left: -100px; /* Center the tooltip */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease; /* Fade-in effect */
+  font-size: 11pt;
+  
+  /* Optional: add shadow to make it look more like a chatbox */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible; /* Show the tooltip when hovering */
+  opacity: 1; /* Make it visible with fade-in effect */
+}
+
+/* Create the arrow */
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Position at the bottom of the tooltip */
+  left: 50%;
+  margin-left: -10px; /* Centers the arrow */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Left side of the arrow */
+  border-right: 10px solid transparent; /* Right side of the arrow */
+  border-top: 10px solid rgb(255, 255, 255); /* The actual arrow */
+}
+
+.teasercontainer {
+  color:white;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  padding-top:15vh;
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  margin-bottom: 0px;
+  flex-direction: column;
+
+}
+
+.video-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 5vw;
+}
+
+.youtube-video {
+  width: 560px; /* Set width of video */
+  height: 315px; /* Set height of video */
+  max-width: 95vw;
+}
+
+  .textbox {
+    width: 20vw; /* Restrict width */
+    height: auto; /* Adjust based on content */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .multiepisode.textbox {
+    margin-left:20px;
+  }
+
+  .textbox img{
+    height: 315px;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+.title {
+  white-space: normal; /* Ensures words wrap only at spaces */
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2; /* Keeps text compact */
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+
+.description {
+  font-size: 20px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.divider {
+  position: relative;
+  width: 60%; /* Adjust the width of the divider */
+  border: 0;
+  border-top: 2px solid white; /* White color line */
+  margin: 10px auto; /* Adds space around the line */
+}
+
+.image.style7 .frame{
+  border-radius: 4%/7.6%;
+  max-width: 100%;
+  transition: transform 0.25s ease, z-index 0.25s ease;
+  width: auto;
+  min-width: 200px;
+  position: relative; /* Required for positioning the caption */
+  display: inline-block;}
+
+  .paragraph{
+    margin-bottom: 20px ;
+    text-align: left;
+    line-height: 1.25;
+    font-size:18px;
+  }
+
+  .paragraph a:hover{
+    color: #f5212b;
+  }
+
+.centeringcontainer{
+  display: flex;
+  justify-content: center; /* Centers the grid horizontally */
+  width: 100vw;
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  padding: 0px 8vw;
+  flex-direction: column;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+  grid-gap: 16px;
+  justify-content: center;
+  padding: initial;
+}
+
+.episodelog-item {
+  list-style-type: none;
+  padding: 5px;
+  display: flex; /* Make sure the li is a flex container */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: auto; /* Ensures the item fills its grid cell */
+}
+
+.episodelog-item img {
+  width: 100%; /* Ensures the image takes the full width of the grid item */
+  height: auto; /* Keeps the aspect ratio */
+  transition: transform 0.3s ease; /* Adds a smooth hover effect */
+}
+
+.main > .inner > * > .style1, .main > .inner > * > .centeringcontainer,  .main > .inner > * > .banner {
+  margin-bottom: 0;  /* Set your desired margin */
+  margin-top: 0;     /* Set your desired margin */
+}
+
+/*comeback layout styling*/
+.cb-video-box{
+  gap: 20px; 
+  justify-content: space-between; 
+  width: 100%; 
+  max-width: 1200px;
+}
+
+.cbimage{
+  width: auto;
+}
+
+.tracklist-box{
+  justify-content: flex-start;
+}
+
+.cb-buttons{
+  gap: auto; 
+  flex-direction: column; 
+}
+
+.cbsecondbox{
+  margin-top: 5vh;
+}
+
+.cbtext{
+width: 50vw;
+text-align: left;
+}
+
+.cbcontainer{
+  margin-bottom:0px; 
+  padding-top: 0px;
+}
+
+p.style1.cb-title{
+  text-align: center; 
+  margin-bottom: 0px; 
+  font-weight: bold; 
+  font-size:45px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.5; /* Ensures consistent height */
+  align-items: baseline; /* Ensures text is aligned at the bottom */
+
+
+}
+
+.songtitle {
+  white-space: nowrap;
+  text-align: left;
+  margin-right: 4px;
+}
+
+.dots {
+flex-grow: 1;
+  border-bottom: 3px dotted rgb(255, 255, 255);
+  height: 1em; /* Ensures the dots are aligned with text */
+  overflow: hidden;
+
+}
+
+.duration {
+  white-space: nowrap;
+  margin-left: 4px;
+}
+
+.tracklisttitle{
+white-space: normal; /* Ensures words wrap only at spaces */
+text-align: center;
+font-weight: bold;
+line-height: 1.2; /* Keeps text compact */
+margin-bottom: 20px;
+font-size: 40px;
+}
+.tracklist{
+width:100%;
+}
+
+.musicicon img{
+  
+  height: 8vh; /* Set a fixed height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures full image is visible */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.musicicon img:hover{
+  transform: scale(1.1125);
+}
+
+
+/*about page styling*/
+
+.abpagetext{
+  width: 35vw; 
+  margin-left: 0px;
+}
+
+/* responsive media resizing for phones*/
+@media (max-width: 768px) {
+  .main > .inner > * > *, .main > .inner > * > .style1.cb-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+  #wrapper2 {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .text-container{
+    text-align: center;
+    width: 100vw;
+  }
+
+  .cataloguepagegrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    gap: 8px;
+    padding: 10px;
+    width: 100vw;
+    margin-left: calc(var(--padding-horizontal) * -1);
+}
+  p.style1 {
+  /* text-align: -webkit-left; */
+  width: calc(100vw - 100px);
+  left: calc(var(--padding-horizontal)* -1);
+  padding-left: 10px;
+  }
+  .catalogue-item {
+    flex: 0 0 auto; /* Prevents items from stretching, and allows them to shrink or grow based on content */
+    width: auto; /* Ensures the items adjust based on their content */
+  }
+
+  #landingpagetext{
+    flex-direction: column;
+    padding: 0 calc(var(--padding-horizontal))
+  }
+
+  .abpagetext{
+    width: 80vw;
+    margin-left: calc(var(--padding-horizontal) * -1.5);
+  }
+
+  #aboutsection.top-banner {
+    left: calc(var(--padding-horizontal) * -1);
+    top: 0;
+    width: max-content;
+}
+.video-box{
+  flex-direction: column;
+}
+
+.tracklist-box{
+  width:80vw;
+}
+
+.divider{
+  border-top: 0px;
+}
+
+.cbtext{
+  width: 80vw;
+}
+
+p.style1.cb-title{
+  width:100vw;
+}
+
+.top-banner{
+ position: absolute;
+}
+
+.multiepisode.textbox{
+  width:80vw;
+}
+.teasercontainer{
+  padding-top:0px;
+
+}
+
+.bckgndimage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything */
+  text-align: center;
+  height: auto; /* Adjust height for mobile */
+  padding: 20px; /* Adds spacing */
+}
+
+.bckgndimage-container::before {
+  display: none; /* Removes the gradient overlay */
+}
+
+.background-image {
+  width: 100%;
+  height: auto; /* Makes image resize properly */
+  margin-top: 80px;
+}
+
+.overlay-content {
+  position: static; /* Removes absolute positioning */
+  transform: none;
+  width: 90%; /* Full width with padding */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Add spacing */
+}
+
+.button2-container {
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px;
+}
+
+.button2 {
+  width: 100%; /* Full width buttons */
+  max-width: 250px; /* Prevents them from being too wide */
+  margin: 0 auto; /* Center the buttons */
+
+}
+}
+
+
+@media (max-width: 400px) {
+#switchcontainer{
+  font-size:0.45rem;
+}
+}
+
