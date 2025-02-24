@@ -1,0 +1,46 @@
+name: Optimize and Deploy Website
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install webp -y
+          npm install -g html-minifier cssnano terser
+
+      - name: Minify HTML, CSS, and JavaScript
+        run: |
+          mkdir -p optimized
+          for file in *.html; do
+            html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true "$file" -o "optimized/$file"
+          done
+          for file in *.css; do
+            cssnano "$file" "optimized/$file"
+          done
+          for file in *.js; do
+            terser "$file" -o "optimized/$file"
+          done
+
+      - name: Optimize Images (Convert to WebP)
+        run: |
+          mkdir -p optimized/images
+          for img in images/*.{jpg,png}; do
+            cwebp -q 75 "$img" -o "optimized/${img%.*}.webp"
+          done
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./optimized
