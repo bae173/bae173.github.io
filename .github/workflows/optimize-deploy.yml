@@ -1,5 +1,8 @@
 name: Optimize and Deploy Website
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
