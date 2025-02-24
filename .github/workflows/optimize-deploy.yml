@@ -22,15 +22,23 @@ jobs:
       - name: Minify HTML, CSS, and JavaScript
         run: |
           mkdir -p optimized
+          
+          # Minify HTML
           for file in *.html; do
-            html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true "$file" -o "optimized/$file"
+            [ -f "$file" ] && html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true "$file" -o "optimized/$file"
           done
+
+          # Minify CSS
           for file in *.css; do
-            postcss "$file" --use cssnano --no-map -o "optimized/$file"
+            [ -f "$file" ] && postcss "$file" --use cssnano --no-map -o "optimized/$file"
           done
-          for file in *.js; do
-            terser "$file" -o "optimized/$file"
-          done
+
+          # Minify JavaScript only if JS files exist
+          if ls *.js 1> /dev/null 2>&1; then
+            for file in *.js; do
+              terser "$file" -o "optimized/$file"
+            done
+          fi
 
       - name: Optimize Images (Convert to WebP)
         run: |
