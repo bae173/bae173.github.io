@@ -597,7 +597,6 @@ color: #f5212b;
   height: 100%;
   object-fit: cover;
   left: 0;
-  top: calc(var(--padding-vertical)*-1);
 }
 
 .bckgndimage-container {
@@ -614,7 +613,6 @@ color: #f5212b;
   .bckgndimage-container::before {
     content: "";
     position: absolute;
-    top: calc(var(--padding-vertical)*-1);
     left: calc(var(--padding-horizontal)*-1);
     width: 100vw;
     height: 100%;
@@ -631,7 +629,7 @@ color: #f5212b;
   z-index: 2; /* Ensures it's above the image */
   text-align: left;
   width:45vw;
-  padding-bottom: 50px;
+  padding-bottom: 13vh;
 }
 
 .overlay-content h1, .overlay-content p {
@@ -662,10 +660,11 @@ color: #f5212b;
   color: white; /* Button text color */
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 5px;
   text-align: center;
   align-content: center;
+  opacity: 1;
 }
 
 .button3-container {
